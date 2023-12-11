@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Actions</title>
+</head>
+<body>
+    <h1>Employee Actions</h1>
+
+    <a href="{% url 'employee-list-create' %}">Create Employee</a><br><br>
+
+    <a href="{% url 'employee-list-create' %}">List Employees</a><br><br>
+
+    <form method="post" action="{% url 'update-salary-delete-inactive' %}">
+        {% csrf_token %}
+        <input type="submit" value="Update Salary and Delete Inactive Employees">
+    </form>
+</body>
+</html>
